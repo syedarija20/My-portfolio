@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://us-assets.i.posthog.com"> -->
+
+        <meta name="description" content="This is my Personal Profile.">
+        <meta name="keywords" content="Personal Profile">        
+        <meta name="robots" content="index , follow">
+
+        <link rel="stylesheet" href="PERSONAL-PROFILE.CSS">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+        <link rel="preload" as="image" href="illustration/098125754665f43425bd9074d92da01e-modified.webp">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+        crossorigin="anonymous"referrerpolicy="no-referrer" />
+        <title>Personal Profile</title>
+    </head>
+    
+    <body>
+        <header class="container">
+
+            <div class="section-navbar grid grid-two--cols">
+            <div class="image-container">
+                <img src="illustration/098125754665f43425bd9074d92da01e-modified.webp" alt="" class="profile-img">
+            </div>
+            
+
+            <div class="navbar">
+                <ul>
+                    <li class="nav-item">
+                        <a href="PERSONAL-HOME.HTML">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PERSONAL.ABOUT.HTML">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PERSONAL.SKILL.HTML">Skill</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PERSONAL.PROJECTS.HTML">Project</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="PERSONAL.CONTACT.HTML">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+<section class="hero ">
+  <div class="hero-text">
+    <h2>Hi, I'm Syeda Rija</h2>
+    <p>FASHION DESIGNER</p>
+  </div>
+</section>
+
+</header>
+        <main>
+
+            <div class="section-project" data-aos="fade-right">
+                <div class="main-container">
+                    <div class="section-common-heading">
+                        <h3>MY FASHION IllustrationS</h3>
+                    </div>
+
+                    <div class="images">
+                        <div class="image active"><img src="illustration/IMG-20250621-WA0170 (1).webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250624-WA0014 (2).webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0031.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0033.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0035.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0042.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0043.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0049.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0051.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0053.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0064.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0067_2.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250727-WA0013_2.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0079.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0083.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250727-WA0000_1.webp" alt=""></div>
+                        <div class="image"><img src="illustration/IMG-20250703-WA0072_1.webp" alt=""></div>
+                    </div>
+
+                    <div class="lightbox" id="lightbox">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <img id="lightbox-img" src="" alt="Lightbox Image">
+                    <div class="btn-container">
+                        <button class="prev-btn">Prev</button>
+                        <button class="next-btn">Next</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-text">
+                <p>All rights reserved.© 2025 Syed Sahil.</p>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script defer>
+    AOS.init();
+  const images = document.querySelectorAll('.images img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  let slideIndex = 0;
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Optional: close on outside click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+images[slideIndex].classList.add("active");
+
+   prevBtn.addEventListener("click" , prevBtnFunction);
+    nextBtn.addEventListener("click" , nextBtnFunction);
+
+
+    function prevBtnFunction(){
+      images[slideIndex].classList.remove("active");
+
+      slideIndex = (slideIndex === 0) ? images.length - 1  : slideIndex - 1;
+      lightboxImg.src = images[slideIndex].src;
+      images[slideIndex].classList.add("active");
+    }
+
+
+    function nextBtnFunction(){
+      images[slideIndex].classList.remove("active");
+
+      slideIndex = (slideIndex === images.length - 1) ? 0 : slideIndex + 1;
+      lightboxImg.src = images[slideIndex].src;
+      images[slideIndex].classList.add("active");
+    }
+
+
+  </script>
+    </body>
+</html>
